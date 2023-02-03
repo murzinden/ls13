@@ -1,0 +1,638 @@
+/*
+font-weight:
+Устанавливает насыщенность шрифта.
+100 - thin
+300 - lite
+400 - normal
+500 - medium
+600 - semibold
+700 - bold
+900 - black
+*/
+
+/* &display=swap&subset=cyrillic-ext */
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&display=swap&subset=cyrillic-ext "); 
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic");
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Bold.woff2') format('woff2'),
+        url('../fonts/Gilroy-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Regular.woff2') format('woff2'),
+        url('../fonts/Gilroy-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ОБНУЛЕНИЕ СТИЛЕЙ */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+html,
+body {
+	height: 100%;
+}
+html {
+	font-size: 16px; /* по умолчанию */
+}
+body {
+	line-height: 1;
+	overflow-x: hidden;
+	background:rgba(0, 0, 0, 0.8); 
+	color: #f5f5f5;
+}
+.wrapper {
+	min-height: 100%;
+	font-family: 'Roboto' ;
+}
+/* ------------------------------ */
+
+.main {
+	
+	padding: 70px 0px 0px 0px;
+}
+.car {
+	display: flex;
+	justify-content: center;
+	
+}
+
+
+
+.car__body {
+	width: 400px;
+	height: 200px;
+	/* border: 1px solid #f5f5f5; */
+	position: relative;
+	z-index: 23;
+	animation: car 20s 1 linear;
+}
+@keyframes car {
+	0% {
+		transform: scale(0);
+	}
+	
+	50% {
+		transform: scale(0.5);
+	}
+	
+	100% {
+		transform: scale(1);
+	}
+}
+
+/* -------- крыша */
+.car__roof {
+	
+}
+.roof-car {
+	background-color: #13bcf0;
+}
+.roof-car__top {
+	width: 250px;
+	border: 1px solid #f5f5f5;
+	position: absolute;
+	top: 0px;
+	left: 70px;
+	transform: skew(0deg, 0deg);
+}
+.roof-car__right {
+	width: 45px;
+	border: 1px solid #f5f5f5;
+	position: absolute;
+	top: 32px;
+	left: 320px;
+	transform: skew(0deg, 55deg);
+}
+
+.roof-car__left {
+	width: 45px;
+	border: 1px solid #f5f5f5;
+	position: absolute;
+	top: 32px;
+	left: 25px;
+	transform: skew(0deg, -55deg);
+}
+
+/* -------- лобовое стекло */
+
+.car__glass {
+	
+}
+.glass-car {
+	
+}
+.glass-car__top {
+	width: 230px;
+	border: 1px solid #f5f5f5;
+	position: absolute;
+	top: 10px;
+	left: 77px;
+	transform: skew(0deg, 0deg);
+}
+.glass-car__right {
+	width: 38px;
+	border: 1px solid #f5f5f5;
+	position: absolute;
+	top: 37px;
+	left: 307px;
+	transform: skew(0deg, 55deg);
+}
+.glass-car__left {
+	width: 38px;
+	border: 1px solid #f5f5f5;
+	position: absolute;
+	top: 37px;
+	left: 39px;
+	transform: skew(0deg, -55deg);
+}
+
+
+/* -------- кузов */
+
+.car__carcase {
+	width: 400px;
+	height: 133px;
+	border: 1px solid #f5f5f5;
+	border-radius: 7px;
+	position: absolute;
+	top: 65px;
+	left: 0px;
+}
+
+/* -------- противотуманки */
+
+.car__lamp {
+}
+.lamp-car {
+}
+.lamp-car__right {
+	width: 25px;
+	height: 25px;
+	border: 1px solid #f5f5f5;
+	border-radius: 50%;
+	position: absolute;
+	bottom: 30px;
+	left: 40px;
+}
+.lamp-car__left {
+	width: 25px;
+	height: 25px;
+	border: 1px solid #f5f5f5;
+	border-radius: 50%;
+	position: absolute;
+	bottom: 30px;
+	right: 45px;
+}
+
+
+/* -------- радиатор */
+
+.car__radiator {
+	width: 170px;
+	height: 40px;
+	border: 1px solid #f5f5f5;
+	position: absolute;
+	bottom: 30px;
+	right: 110px;
+	border-radius: 0px 0px 15px 15px;
+}
+
+
+/* -------- фары */
+
+
+.car__headlight {
+}
+.headlight-car {
+}
+.headlight-car__right {
+	width: 25px;
+	height: 25px;
+	border: 1px solid #f5f5f5;
+	border-radius: 50%;
+	position: absolute;
+	bottom: 80px;
+	left: 40px;
+}
+.headlight-car__left {
+	width: 25px;
+	height: 25px;
+	border: 1px solid #f5f5f5;
+	border-radius: 50%;
+	position: absolute;
+	bottom: 80px;
+	right: 45px;
+}
+
+/* -------- обод к фарам */
+
+.car__rim {
+}
+.rim-car {
+}
+.rim-car__right {
+	width: 50px;
+	height: 25px;
+	border: 1px solid #f5f5f5;
+	border-radius: 10px 0px 20px 20px;
+	position: absolute;
+	bottom: 80px;
+	right: 35px;
+}
+.headlight-car__hatch-right {
+	width: 25px;
+	border: 1px solid #f5f5f5;
+	position: absolute;
+	bottom: 93px;
+	right: 85px;
+	transform: rotate(110deg);
+}
+
+.rim-car__left {
+	width: 50px;
+	height: 25px;
+	border: 1px solid #f5f5f5;
+	border-radius: 0px 10px 20px 20px;
+	position: absolute;
+	bottom: 80px;
+	left: 28px;
+}
+
+.headlight-car__hatch-left {
+	width: 25px;
+	border: 1px solid #f5f5f5;
+	position: absolute;
+	bottom: 93px;
+	left: 80px;
+	transform: rotate(-110deg);
+}
+
+/* -------- колеса */
+
+.car__wheel {
+}
+.wheel-car {
+}
+.wheel-car__right {
+	width: 50px;
+	height: 40px;
+	border: 1px solid #f5f5f5;
+	border-radius: 0px 0px 10px 10px;
+	position: absolute;
+	bottom: -37px;
+	right: 10px;
+}
+.wheel-car__hatch1-right {
+	width: 35px;
+	border: 1px solid #f5f5f5;
+	transform: rotate(90deg);
+	position: absolute;
+	bottom: -18px;
+	right: 4px;
+}
+.wheel-car__hatch2-right {
+	width: 35px;
+	border: 1px solid #f5f5f5;
+	transform: rotate(90deg);
+	position: absolute;
+	bottom: -18px;
+	right: 12px;
+}
+.wheel-car__hatch3-right {
+	width: 35px;
+	border: 1px solid #f5f5f5;
+	transform: rotate(90deg);
+	position: absolute;
+	bottom: -18px;
+	right: 24px;
+}
+.wheel-car__hatch4-right {
+	width: 35px;
+	border: 1px solid #f5f5f5;
+	transform: rotate(90deg);
+	position: absolute;
+	bottom: -18px;
+	right: 32px;
+}
+
+.wheel-car__incline1-right {
+	width: 9px;
+	border: 1px solid #f5f5f5;
+	transform: rotate(45deg);
+	position: absolute;
+	bottom: -10px;
+	right: 21px;
+	animation: incl1 0.8s 25 linear  ;
+}
+
+@keyframes incl1 {
+	0% {
+		transform: translateY(-10px);
+	}
+	
+	50% {
+		transform: translateY(0px);
+	}
+
+	
+	100% {
+		transform: translateY(20px);
+	}
+}
+
+/* .wheel-car__incline2-right {
+	width: 9px;
+	border: 1px solid #f5f5f5;
+	transform: rotate(45deg);
+	position: absolute;
+	bottom: -26px;
+	right: 21px;
+	animation: incl2 0.5s 125 linear alternate ;
+}
+@keyframes incl2 {
+	0% {
+		transform: translateY(-10px);
+	}
+	
+	50% {
+		transform: translateY(-5px);
+	}
+
+	
+	100% {
+		transform: translateY(0px);
+	}
+} */
+.wheel-car__incline3-right {
+	width: 9px;
+	border: 1px solid #f5f5f5;
+	transform: rotate(45deg);
+	position: absolute;
+	bottom: -10px;
+	right: 41px;
+	animation: incl3 0.8s 25 linear  ;
+}
+@keyframes incl3 {
+	0% {
+		transform: translateY(-10px);
+	}
+	
+	50% {
+		transform: translateY(0px);
+	}
+
+	
+	100% {
+		transform: translateY(20px);
+	}
+}
+/* .wheel-car__incline4-right {
+	width: 9px;
+	border: 1px solid #f5f5f5;
+	transform: rotate(45deg);
+	position: absolute;
+	bottom: -26px;
+	right: 41px;
+	animation: incl4 0.5s 125 linear alternate ;
+}
+@keyframes incl4 {
+	0% {
+		transform: translateY(-10px);
+	}
+	
+	50% {
+		transform: translateY(-5px);
+	}
+
+	
+	100% {
+		transform: translateY(0px);
+	}
+} */
+.wheel-car__left {
+	width: 50px;
+	height: 40px;
+	border: 1px solid #f5f5f5;
+	border-radius: 0px 0px 10px 10px;
+	position: absolute;
+	bottom: -37px;
+	left: 10px;
+}
+
+.wheel-car__hatch5-left {
+	width: 35px;
+	border: 1px solid #f5f5f5;
+	transform: rotate(90deg);
+	position: absolute;
+	bottom: -18px;
+	left: 32px;
+}
+.wheel-car__hatch6-left {
+	width: 35px;
+	border: 1px solid #f5f5f5;
+	transform: rotate(90deg);
+	position: absolute;
+	bottom: -18px;
+	left: 24px;
+}
+.wheel-car__hatch7-left {
+	width: 35px;
+	border: 1px solid #f5f5f5;
+	transform: rotate(90deg);
+	position: absolute;
+	bottom: -18px;
+	left: 12px;
+}
+.wheel-car__hatch8-left {
+	width: 35px;
+	border: 1px solid #f5f5f5;
+	transform: rotate(90deg);
+	position: absolute;
+	bottom: -18px;
+	left: 4px;
+}
+
+.wheel-car__incline5-left {
+	width: 9px;
+	border: 1px solid #f5f5f5;
+	transform: rotate(45deg);
+	position: absolute;
+	bottom: -10px;
+	left: 21px;
+	animation: incl5 0.8s 25 linear  ;
+}
+@keyframes incl5 {
+	0% {
+		transform: translateY(-10px);
+	}
+	
+	50% {
+		transform: translateY(0px);
+	}
+
+	
+	100% {
+		transform: translateY(20px);
+	}
+}
+/* .wheel-car__incline6-left {
+	width: 10px;
+	border: 1px solid #f5f5f5;
+	transform: rotate(45deg);
+	position: absolute;
+	bottom: -26px;
+	left: 21px;
+} */
+.wheel-car__incline7-left {
+	width: 9px;
+	border: 1px solid #f5f5f5;
+	transform: rotate(45deg);
+	position: absolute;
+	bottom: -10px;
+	left: 40px;
+	animation: incl7 0.8s 25 linear;
+}
+
+@keyframes incl7 {
+	0% {
+		transform: translateY(-10px);
+	}
+	
+	50% {
+		transform: translateY(0px);
+	}
+
+	
+	100% {
+		transform: translateY(20px);
+	}
+}
+/* .wheel-car__incline8-left {
+	width: 10px;
+	border: 1px solid #f5f5f5;
+	transform: rotate(45deg);
+	position: absolute;
+	bottom: -26px;
+	left: 40px;
+	animation: incl5 0.8s 125 linear;
+} */
+
+
+/* -------- зеркала */
+
+.car__mirror {
+}
+.mirror-car {
+}
+.mirror-car__right {
+	width: 40px;
+	height: 25px;
+	border: 1px solid #f5f5f5;
+	border-radius: 159px 50px 40px 40px;
+	position: absolute;
+	top: 5px;
+	left: -21px;
+}
+.mirror-car__beam1-right {
+	width: 34px;
+	border: 1px solid #f5f5f5;
+	position: absolute;
+	top: 46px;
+	right: 0px;
+	transform: rotate(110deg);
+}
+.mirror-car__beam2-right {
+	width: 34px;
+	border: 1px solid #f5f5f5;
+	position: absolute;
+	top: 46px;
+	right: 10px;
+	transform: rotate(110deg);
+}
+.mirror-car__left {
+	width: 40px;
+	height: 25px;
+	border: 1px solid #f5f5f5;
+	border-radius: 40px 159px 40px 50px;
+	position: absolute;
+	top: 5px;
+	right: -12px;
+
+}
+
+.mirror-car__beam1-left {
+	width: 34px;
+	border: 1px solid #f5f5f5;
+	position: absolute;
+	top: 46px;
+	left: 0px;
+	transform: rotate(70deg);
+}
+.mirror-car__beam2-left {
+	width: 34px;
+	border: 1px solid #f5f5f5;
+	position: absolute;
+	top: 46px;
+	left: -10px;
+	transform: rotate(70deg);
+}
+
+/* -------- дорога */
+
+.road {
+	position: relative;
+}
+.road__right {
+	width: 600px;
+	border: 1px solid #f5f5f5;
+	position: absolute;
+	top: 130px;
+	left: 200px;
+	transform: rotate(-40deg);
+}
+
+.road__left {
+	width: 600px;
+	border: 1px solid #f5f5f5;
+	position: absolute;
+	top: 130px;
+	left: 1115px;
+	transform: rotate(40deg);
+}
